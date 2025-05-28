@@ -3,5 +3,40 @@ name = "news-recommender"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = []
+requires-python = ">=3.11, <3.14"
+dependencies = [
+    "annoy>=1.17.3",
+    "apache-beam[gcp,interactive]>=2.65.0",
+    "pandas>=2.2.3",
+    "requests>=2.32.3",
+    "scikit-learn>=1.6.1",
+    "sentence-transformers>=4.1.0",
+    "voyager>=2.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff",         # Linter and formatter
+    "pytest",       # For testing
+    "ipykernel",    # For Jupyter support in your venv
+    "notebook",     # Classic Jupyter Notebook
+    "jupyterlab",   # JupyterLab interface
+    "mlflow",       # For experiment tracking and model registry
+    "kafka-python", # If you plan to simulate Kafka locally
+    "fastapi",      # For building your serving API
+    "uvicorn[standard]", # ASGI server for FastAPI
+    # Add Flyte or Luigi later if needed
+    # "flytekit",
+    # "luigi"
+]
+
+[tool.ruff]
+line-length = 88
+# Add other ruff configurations as needed
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "C4", "B"] # Example rule set
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
