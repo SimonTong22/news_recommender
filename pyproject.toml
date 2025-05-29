@@ -8,6 +8,7 @@ dependencies = [
     "annoy>=1.17.3",
     "apache-beam[gcp,interactive]>=2.65.0",
     "pandas>=2.2.3",
+    "python-dotenv>=1.1.0",
     "requests>=2.32.3",
     "scikit-learn>=1.6.1",
     "sentence-transformers>=4.1.0",
@@ -36,7 +37,9 @@ line-length = 88
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "UP", "C4", "B"] # Example rule set
-ignore = []
+ignore = [
+    "W191", # Ignores "indentation contains tabs"
+]
 
 [tool.ruff.format]
 quote-style = "double"
