@@ -1,7 +1,7 @@
 [project]
 name = "news-recommender"
 version = "0.1.0"
-description = "Add your description here"
+description = "A News Recommendation ML project."
 readme = "README.md"
 requires-python = ">=3.11, <3.14"
 dependencies = [
@@ -25,9 +25,8 @@ dev = [
     "kafka-python", # If you plan to simulate Kafka locally
     "fastapi",      # For building your serving API
     "uvicorn[standard]", # ASGI server for FastAPI
-    # Add Flyte or Luigi later if needed
-    # "flytekit",
-    # "luigi"
+    "flytekit",
+    "luigi"
 ]
 
 [tool.ruff]
@@ -40,3 +39,4 @@ ignore = []
 
 [tool.ruff.format]
 quote-style = "double"
+indent-style = "tab"
