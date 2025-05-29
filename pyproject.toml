@@ -26,7 +26,8 @@ dev = [
     "fastapi",      # For building your serving API
     "uvicorn[standard]", # ASGI server for FastAPI
     "flytekit",
-    "luigi"
+    "luigi",
+    "pre-commit"
 ]
 
 [tool.ruff]

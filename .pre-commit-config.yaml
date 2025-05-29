@@ -1,0 +1,25 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0 # Use the latest stable version
+    hooks:
+    -   id: check-yaml
+    -   id: check-toml
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+    -   id: check-merge-conflict # Prevent committing merge conflict markers
+    -   id: check-added-large-files # Prevent accidentally committing large files
+
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version. Optional: Fix to a specific Ruff version.
+    # rev: ruff-vx.y.z
+    # If you don't set 'rev', pre-commit will use the Ruff version
+    # installed in your environment, which is often desirable.
+    # However, for team consistency, pinning a version in `rev` is good.
+    # Let's use a specific version for example, check for the latest:
+    rev: v0.4.4 # Replace with the latest ruff version or your desired version
+    hooks:
+    # Run the linter.
+    -   id: ruff
+        args: [--fix, --exit-non-zero-on-fix] # Apply fixes and exit with error if fixes were made
+    # Run the formatter.
+    -   id: ruff-format
