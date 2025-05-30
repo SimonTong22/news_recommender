@@ -92,7 +92,7 @@ def fetch_single_query_from_newsapi(
 	category,
 	page_size,
 ):
-	today_date_str = datetime.today().date()
+	today_date_str = str(datetime.today().date())
 	cache_filename = f"{today_date_str}_{category}_{page_size}"
 	full_cache_filename = os.path.join(CACHE_DIR, f"{cache_filename}.json")
 	cached_data = load_api_response_from_cache(full_cache_filename)
@@ -116,7 +116,7 @@ def fetch_single_query_from_newsapi(
 
 
 def fetch_all_articles(categories, articles_per_category):
-	today_date_str = datetime.today().date()
+	today_date_str = str(datetime.today().date())
 	today_output_dir = os.path.join(RAW_ARTICLES_DIR, today_date_str)
 	os.makedirs(today_output_dir, exist_ok=True)
 
