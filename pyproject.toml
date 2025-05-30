@@ -28,7 +28,8 @@ dev = [
     "uvicorn[standard]", # ASGI server for FastAPI
     "flytekit",
     "luigi",
-    "pre-commit"
+    "pre-commit",
+    "pytest-mock"
 ]
 
 [tool.ruff]
