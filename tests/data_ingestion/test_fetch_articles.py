@@ -1,5 +1,3 @@
-# tests/data_ingestion/test_fetch_articles.py
-
 import os
 from datetime import datetime
 from unittest.mock import MagicMock  # For mocking API calls
