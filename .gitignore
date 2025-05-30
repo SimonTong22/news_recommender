@@ -13,3 +13,7 @@ env/
 build/
 dist/
 *.egg-info/
+
+# Project Data (DO NOT COMMIT RAW DATA)
+data/
+data/
